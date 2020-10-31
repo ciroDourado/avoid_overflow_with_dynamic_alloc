@@ -52,6 +52,7 @@ void read_and_dynamically_fit_to(char** heap_string) {
 					printf("The OS couldn't provide memory to you\n");
 					printf("Nothing will be assigned\n");
 					printf("Data will be erased\n");
+					do { } while(getchar() != '\n');
 					return;
 				}
 				(*heap_string)[size-2] = c;
