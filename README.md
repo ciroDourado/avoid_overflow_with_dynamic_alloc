@@ -1,4 +1,6 @@
 # avoid_overflow_with_dynamic_alloc
 The repository name explains by itself
 
-In future commits, I'm going to bring it as a separated function/module, and try to write everything in english.
+I've tryed to do something like the standard read functions from Rust, in C.
+Being succinct, in Rust every input must be read/stored in an dynamically allocated variable, or Strings (types that live on the heap).
+Any other usage from those text inputs must be processed, like parsed to an numeric encoding, or take some part from it and throw into the stack memory.
