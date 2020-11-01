@@ -74,8 +74,8 @@ void read_a_slice(char** heap_string, int limit) {
         printf("Sorry, can't read from it.\n");
     } else {
         if(limit < 0 || limit >= strlen(*heap_string)) {
-            printf("Invalid size!\n");
-            printf("Nothing to be done.\n");
+            //printf("Invalid size!\n");
+            //printf("Nothing to be done.\n");
         } else {
             char temporary_stack_string[limit+1];
             strncpy(temporary_stack_string, (*heap_string), sizeof(temporary_stack_string));
