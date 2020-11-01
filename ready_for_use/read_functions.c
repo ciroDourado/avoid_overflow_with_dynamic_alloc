@@ -46,11 +46,13 @@ void read_a_slice(char** heap_string, int limit) {
     read_and_dynamically_fit_to(heap_string);
 	
     if((*heap_string) == NULL) {
-        printf("Sorry, can't read from it.\n");
+        printf("Sorry, can't read from it\n");
+	printf("Something very bad happened :/ \n");
     } else {
         if(limit < 0 || limit >= strlen(*heap_string)) {
            // printf("Invalid size!\n");
            // printf("Nothing to be done.\n");
+	   // printf("The original string will be returned.\n");
         } else {
             char temporary_stack_string[limit+1];
             strncpy(temporary_stack_string, (*heap_string), sizeof(temporary_stack_string));
@@ -61,7 +63,7 @@ void read_a_slice(char** heap_string, int limit) {
 		    if(*heap_string == NULL) {
 			    printf("The OS couldn't provide memory to you\n");
 			    printf("Nothing will be assigned\n");
-			    printf("Data will be erased\n");
+			    printf("Data will be erased.\n");
 			    return;
 		    } // in case of some run out of memory
 		    
